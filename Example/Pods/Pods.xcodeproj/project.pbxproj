@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		256E771939E4399FBA465485F063FDFB /* Pods-NSHyperLabelSwift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7423DA007EE78E58C4254F76F5BD3491 /* Pods-NSHyperLabelSwift_Example-dummy.m */; };
+		278D9D9C855E1906DE442549774221E5 /* NSHyperLabelSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF2E8066E66342D4D2828485F458D34 /* NSHyperLabelSwift-dummy.m */; };
 		3AC6AD8AAFFD49012E88DA1AB33F4942 /* Pods-NSHyperLabelSwift_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA47986E6756A78F52ECFF0FD0165A2E /* Pods-NSHyperLabelSwift_Tests-dummy.m */; };
 		65EBB8331A7DE3D16142202344C6464D /* Pods-NSHyperLabelSwift_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B84A30830C432C45DAE6E4CD797C10E2 /* Pods-NSHyperLabelSwift_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9DB4DB15554DD9BFC70D60DEBE4F4381 /* Pods-NSHyperLabelSwift_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 34C11E33986672996973923FD73D4A22 /* Pods-NSHyperLabelSwift_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F1CE9BCAEEB78A073691426BF0412E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		A17076F4544F3FBB7063497176D5E766 /* NSHyperLabelSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF2E8066E66342D4D2828485F458D34 /* NSHyperLabelSwift-dummy.m */; };
-		A5C238FD1D3F8F9300A5174F /* NSHyperLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C238FC1D3F8F9300A5174F /* NSHyperLabel.swift */; };
+		B863D4D9CFF8FB529C00B86227180D74 /* NSHyperLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96D11EB616ECB6459FFD893F726CB23 /* NSHyperLabel.swift */; };
 		BB87276F34E513430CCECF3733668332 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		F7C8DF269643B7F165C8945391CB6E5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		FF8125775A9ED499E1FDF6461AABF775 /* NSHyperLabelSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E259C15FA632724B9926CAE6E1B0B96C /* NSHyperLabelSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -45,7 +45,6 @@
 		58D236DB9F4F4A2A62ED857979CB9CA6 /* Pods-NSHyperLabelSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NSHyperLabelSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7423DA007EE78E58C4254F76F5BD3491 /* Pods-NSHyperLabelSwift_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NSHyperLabelSwift_Example-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A5C238FC1D3F8F9300A5174F /* NSHyperLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSHyperLabel.swift; sourceTree = "<group>"; };
 		B052E263CEE591706DBDD042E8E78CF0 /* Pods-NSHyperLabelSwift_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-NSHyperLabelSwift_Tests.modulemap"; sourceTree = "<group>"; };
 		B84A30830C432C45DAE6E4CD797C10E2 /* Pods-NSHyperLabelSwift_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NSHyperLabelSwift_Tests-umbrella.h"; sourceTree = "<group>"; };
 		C20E0A75B26BA3C533F6E9042138CB3E /* Pods_NSHyperLabelSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NSHyperLabelSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +61,7 @@
 		F277D5C85FC9327306481F8945F71B4F /* NSHyperLabelSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = NSHyperLabelSwift.modulemap; sourceTree = "<group>"; };
 		F310A04552FA70B9306589D2910E8361 /* Pods_NSHyperLabelSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NSHyperLabelSwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F423D5725B214C70D2F7A6DCC6FF4BC5 /* Pods-NSHyperLabelSwift_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NSHyperLabelSwift_Example-resources.sh"; sourceTree = "<group>"; };
+		F96D11EB616ECB6459FFD893F726CB23 /* NSHyperLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NSHyperLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,7 +174,7 @@
 		9E2032A53C78CEFE51B0103D6BBEDC3C /* NSHyperLabelSwift */ = {
 			isa = PBXGroup;
 			children = (
-				ED44621427BBBFB952A7684E9A6CBC19 /* Classes */,
+				FDAA661ABF2D4F8F348313AA6154E17D /* Classes */,
 			);
 			path = NSHyperLabelSwift;
 			sourceTree = "<group>";
@@ -214,10 +214,10 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		ED44621427BBBFB952A7684E9A6CBC19 /* Classes */ = {
+		FDAA661ABF2D4F8F348313AA6154E17D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				A5C238FC1D3F8F9300A5174F /* NSHyperLabel.swift */,
+				F96D11EB616ECB6459FFD893F726CB23 /* NSHyperLabel.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -273,7 +273,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E498809158345B74EC6967EB730EE198 /* Build configuration list for PBXNativeTarget "NSHyperLabelSwift" */;
 			buildPhases = (
-				06DB9F0E75B2AACE6E1FCF2F8DF17D58 /* Sources */,
+				D6E67072CDC00AAFA5712DB7812A6F2E /* Sources */,
 				E4902BB8B2C49BBF3E15FE446CA7E03C /* Frameworks */,
 				923F382E27D35CED4516C04B0727965C /* Headers */,
 			);
@@ -333,15 +333,6 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		06DB9F0E75B2AACE6E1FCF2F8DF17D58 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A5C238FD1D3F8F9300A5174F /* NSHyperLabel.swift in Sources */,
-				A17076F4544F3FBB7063497176D5E766 /* NSHyperLabelSwift-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A27BC1B8BEFFC7A44F7CDADD20AD8796 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -355,6 +346,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				256E771939E4399FBA465485F063FDFB /* Pods-NSHyperLabelSwift_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6E67072CDC00AAFA5712DB7812A6F2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B863D4D9CFF8FB529C00B86227180D74 /* NSHyperLabel.swift in Sources */,
+				278D9D9C855E1906DE442549774221E5 /* NSHyperLabelSwift-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,7 +412,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 130464550857D183D1B8EAC97B5197B0 /* NSHyperLabelSwift.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -442,7 +441,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 130464550857D183D1B8EAC97B5197B0 /* NSHyperLabelSwift.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;

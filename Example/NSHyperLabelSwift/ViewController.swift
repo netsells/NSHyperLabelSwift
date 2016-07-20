@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import NSHyperLabelSwift
 
 class ViewController: UIViewController {
 
+    @IBOutlet var testLabel: HyperLabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        testLabel.text = "YES NETSELLS"
+        testLabel.setLinkForSubstring("NETSELLS", attributes: testLabel.linkAttributeDefault) { (label, substring) in
+            print("YES NETSELLS")
+        }
     }
 
     override func didReceiveMemoryWarning() {
