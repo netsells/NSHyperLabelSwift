@@ -21,12 +21,12 @@ Pod::Spec.new do |s|
 NSHyperLabelSwift is a simple, easy way to add hyperlinks to UILabels. You can add a hyperlink from a substring.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/NSHyperLabelSwift'
+  s.homepage         = 'https://github.com/netsells/NSHyperLabelSwift'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Jack Colley' => 'jack.colley@netsells.co.uk' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/NSHyperLabelSwift.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/netsells/NSHyperLabelSwift.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/jackcolley'
 
   s.ios.deployment_target = '8.0'
 
