@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'NSHyperLabelSwift_Example' do
+  pod 'NSHyperLabelSwift', :path => '../'
+
+  target 'NSHyperLabelSwift_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
