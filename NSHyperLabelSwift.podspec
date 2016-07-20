@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'NSHyperLabelSwift'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of NSHyperLabelSwift.'
+  s.summary          = 'An easy way to add hyperlinks to UILabels'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+NSHyperLabelSwift is a simple, easy way to add hyperlinks to UILabels. You can add a hyperlink from a substring.
                        DESC
 
   s.homepage         = 'https://github.com/<GITHUB_USERNAME>/NSHyperLabelSwift'
