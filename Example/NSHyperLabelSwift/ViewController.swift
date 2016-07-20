@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         testLabel.text = "YES NETSELLS"
-        testLabel.setLinkForSubstring("NETSELLS", attributes: testLabel.linkAttributeDefault) { (label, substring) in
+        testLabel.setLinkForSubstring("NETSELLS", attributes: testLabel.linkAttributeDefault, url: NSURL(string: "http://netsells.co.uk")!) { (label, substring) in
             print("YES NETSELLS")
         }
     }
