@@ -16,9 +16,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        testLabel.text = "YES NETSELLS"
+        testLabel.text = "YES NETSELLS... WE'RE DOING IT FOR YOU"
         testLabel.setLinkForSubstring("NETSELLS", attributes: testLabel.linkAttributeDefault, url: NSURL(string: "http://netsells.co.uk")!) { (label, substring) in
             print("YES NETSELLS")
+        }
+        
+        testLabel.setLinkForSubstring("YOU", attributes: testLabel.linkAttributeDefault, url: NSURL(string: "http://jackcolley.co.uk")!) { (label, substring) in
+            print("YES ME")
         }
     }
 

@@ -33,6 +33,8 @@ public class HyperLabel: UILabel {
     
     func setupDefault() {
         self.linkAttributeDefault = NSDictionary(objects: [self.hyperlinkColour, NSUnderlineStyle.StyleSingle.rawValue], forKeys: [NSForegroundColorAttributeName, NSUnderlineStyleAttributeName]) as! [String : AnyObject]
+        
+        self.userInteractionEnabled = true
     }
     
     public func setLinkForSubstring(substring: String, attributes: NSDictionary, url: NSURL, linkHandler: (label: HyperLabel, substring: String)-> Void) {
@@ -70,15 +72,24 @@ public class HyperLabel: UILabel {
     }
     
     public override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-       print("touch began")
+       
     }
     
     public override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        print("touch ended")
+        
         for touch in touches {
             var value = NSValue()
             let urlID = value.attributedTextRangeForPointInLabel(touch.locationInView(self), label: self)
-            print(urlID)
+            
+            if let urlID = urlID {
+                if(self.urls.count > urlID) {
+                    let url = self.urls[urlID]
+                    
+                    if(UIApplication.sharedApplication().canOpenURL(url)) {
+                        UIApplication.sharedApplication().openURL(url)
+                    }
+                }
+            }
         }
     }
 
