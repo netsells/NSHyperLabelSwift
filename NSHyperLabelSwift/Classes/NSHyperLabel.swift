@@ -16,21 +16,22 @@ public class HyperLabel: UILabel {
     
     public var urls = [NSURL]()
     var handlers: [(label: HyperLabel, substring: String)-> Void] = []
+    private var ranges = [NSMutableDictionary]()
     private var stringHandlersDict = [NSAttributedString: Int]()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.checkInitialization()
+        self.setupDefault()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        self.checkInitialization()
+        self.setupDefault()
     }
     
-    func checkInitialization() {
+    func setupDefault() {
         self.linkAttributeDefault = NSDictionary(objects: [self.hyperlinkColour, NSUnderlineStyle.StyleSingle.rawValue], forKeys: [NSForegroundColorAttributeName, NSUnderlineStyleAttributeName]) as! [String : AnyObject]
     }
     
@@ -38,7 +39,9 @@ public class HyperLabel: UILabel {
         let currentText = self.text as! NSString
         
         let substringRange = currentText.rangeOfString(substring)
+        
         urls.append(url)
+        
         if(substringRange.length > 0) {
             self.setLinkForRange(substringRange, attributes: attributes, handler: linkHandler)
         }
@@ -56,21 +59,33 @@ public class HyperLabel: UILabel {
         self.handlers.append(handler)
         self.stringHandlersDict[self.attributedText!.attributedSubstringFromRange(range)] = self.handlers.count - 1
         
+        let dictToAdd = NSMutableDictionary()
+        dictToAdd["url_index"] = urls.count - 1
+        dictToAdd["range"] = range
+        dictToAdd["handler_index"] = self.handlers.count - 1
+        
+        self.ranges.append(dictToAdd)
+        
         self.attributedText = mutableAttributedString
     }
     
     public override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        
+       print("touch began")
     }
     
     public override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        
+        print("touch ended")
+        for touch in touches {
+            var value = NSValue()
+            let urlID = value.attributedTextRangeForPointInLabel(touch.locationInView(self), label: self)
+            print(urlID)
+        }
     }
 
 }
 
 extension NSValue {
-    func attributedTextRangeForPointInLabel(point: CGPoint, label: HyperLabel) {
+    func attributedTextRangeForPointInLabel(point: CGPoint, label: HyperLabel) -> Int? {
         let layoutManager = NSLayoutManager()
         let textContainer = NSTextContainer(size: CGSizeZero)
         
@@ -92,8 +107,13 @@ extension NSValue {
         let locationOfTouchInTextContainer = CGPointMake(locationInLabel.x - textContainerOffset.x, locationInLabel.y - textContainerOffset.y)
         let indexOfCharacter = layoutManager.characterIndexForPoint(locationOfTouchInTextContainer, inTextContainer: textContainer, fractionOfDistanceBetweenInsertionPoints: nil)
         
-        for rangeValue in label.handlers {
-            
+        for dict in label.ranges {
+            let range = dict.objectForKey("range") as! NSRange
+            if (NSLocationInRange(indexOfCharacter, range)) {
+                return dict["url_index"] as? Int;
+            }
         }
+        
+        return nil
     }
 }
