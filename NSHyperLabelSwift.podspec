@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NSHyperLabelSwift'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'An easy way to add hyperlinks to UILabels'
 
 # This description is used to generate tags and improve search results.
