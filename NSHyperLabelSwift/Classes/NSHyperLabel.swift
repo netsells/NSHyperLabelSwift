@@ -12,7 +12,7 @@ open class HyperLabel: UILabel {
     
     @IBInspectable var hyperlinkColour: UIColor = UIColor(red: 64 / 255, green: 120 / 255, blue: 192 / 255, alpha: 1.0)
     
-    open var linkAttributeDefault = [String: AnyObject]()
+    open var linkAttributeDefault = [String: Any]()
     open var urls = [URL]()
     fileprivate var ranges = [NSMutableDictionary]()
     
@@ -29,12 +29,12 @@ open class HyperLabel: UILabel {
     }
     
     func setupDefault() {
-        self.linkAttributeDefault = NSDictionary(objects: [self.hyperlinkColour, NSUnderlineStyle.styleSingle.rawValue], forKeys: [NSForegroundColorAttributeName as NSCopying, NSUnderlineStyleAttributeName as NSCopying]) as! [String : AnyObject]
-        
+        self.linkAttributeDefault[NSForegroundColorAttributeName] = self.hyperlinkColour
+        self.linkAttributeDefault[NSUnderlineStyleAttributeName] = NSUnderlineStyle.styleSingle
         self.isUserInteractionEnabled = true
     }
     
-    open func setLinkForSubstring(_ substring: String, attributes: NSDictionary, url: URL) {
+    open func setLinkForSubstring(_ substring: String, attributes: [String: Any], url: URL) {
         let currentText = NSString(string: self.text!)
         
         let substringRange = currentText.range(of: substring)
@@ -46,13 +46,13 @@ open class HyperLabel: UILabel {
         }
     }
     
-    fileprivate func setLinkForRange(_ range:NSRange, attributes: NSDictionary) {
+    fileprivate func setLinkForRange(_ range:NSRange, attributes: [String: Any]) {
         let mutableAttributedString = NSMutableAttributedString(attributedString: self.attributedText!)
         
         
         if(attributes.count > 0) {
             
-            mutableAttributedString.addAttributes(attributes as! [String : AnyObject], range: range)
+            mutableAttributedString.addAttributes(attributes as! [String : Any], range: range)
         }
         
         let dictToAdd = NSMutableDictionary()

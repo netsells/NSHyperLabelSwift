@@ -17,8 +17,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         testLabel.text = "YES NETSELLS... WE'RE DOING IT FOR YOU"
-        testLabel.setLinkForSubstring("NETSELLS", attributes: testLabel.linkAttributeDefault, url: NSURL(string: "http://netsells.co.uk")!)
-        testLabel.setLinkForSubstring("YOU", attributes: testLabel.linkAttributeDefault, url: NSURL(string: "http://facebook.com")!)
+        testLabel.setLinkForSubstring("NETSELLS", attributes: testLabel.linkAttributeDefault, url: URL(string: "http://netsells.co.uk")!)
+        testLabel.setLinkForSubstring("YOU", attributes: testLabel.linkAttributeDefault, url: URL(string: "http://facebook.com")!)
     }
 
     override func didReceiveMemoryWarning() {

@@ -1,5 +1,5 @@
 PODS:
-  - NSHyperLabelSwift (0.1.0)
+  - NSHyperLabelSwift (0.1.1)
 
 DEPENDENCIES:
   - NSHyperLabelSwift (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  NSHyperLabelSwift: c31e719a1a8ebabfeb74b7022f2a7a64656d6f11
+  NSHyperLabelSwift: 87539d078f940fb5238388b734ad372a69c0a514
 
 PODFILE CHECKSUM: ff648adb915e14780aea75f78c106f99d6cc1c25
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.0.rc.1
