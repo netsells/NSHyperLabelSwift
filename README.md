@@ -28,6 +28,12 @@ it, simply add the following line to your Podfile:
 pod "NSHyperLabelSwift"
 ```
 
+## Roadmap for next version
+
+- [ ] Unit Tests
+- [ ] Thorough Documentation
+- [ ] Better syntax for default attributes
+
 ## Author
 
 Jack Colley, jack.colley@netsells.co.uk

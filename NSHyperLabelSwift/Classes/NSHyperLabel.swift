@@ -52,7 +52,7 @@ open class HyperLabel: UILabel {
         
         if(attributes.count > 0) {
             
-            mutableAttributedString.addAttributes(attributes as! [String : Any], range: range)
+            mutableAttributedString.addAttributes(attributes , range: range)
         }
         
         let dictToAdd = NSMutableDictionary()

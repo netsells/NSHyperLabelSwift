@@ -1,6 +1,6 @@
 {
   "name": "NSHyperLabelSwift",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "summary": "An easy way to add hyperlinks to UILabels",
   "description": "NSHyperLabelSwift is a simple, easy way to add hyperlinks to UILabels. You can add a hyperlink from a substring.",
   "homepage": "https://github.com/netsells/NSHyperLabelSwift",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/netsells/NSHyperLabelSwift.git",
-    "tag": "0.1.1"
+    "tag": "0.1.2"
   },
   "social_media_url": "https://twitter.com/jackcolley",
   "platforms": {
