@@ -12,7 +12,7 @@ open class HyperLabel: UILabel {
     
     @IBInspectable var hyperlinkColour: UIColor = UIColor(red: 64 / 255, green: 120 / 255, blue: 192 / 255, alpha: 1.0)
     
-    open var linkAttributeDefault = [String: Any]()
+    open var linkAttributeDefault = [NSAttributedString.Key: Any]()
     open var urls = [URL]()
     fileprivate var ranges = [NSMutableDictionary]()
     
@@ -29,8 +29,8 @@ open class HyperLabel: UILabel {
     }
     
     func setupDefault() {
-        self.linkAttributeDefault[NSAttributedString.Key.foregroundColor.rawValue] = self.hyperlinkColour
-        self.linkAttributeDefault[NSAttributedString.Key.underlineStyle.rawValue] = NSUnderlineStyle.single
+        self.linkAttributeDefault[.foregroundColor] = self.hyperlinkColour
+        self.linkAttributeDefault[.underlineStyle] = NSUnderlineStyle.single.rawValue
         self.isUserInteractionEnabled = true
     }
     
